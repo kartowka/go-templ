@@ -1,0 +1,13 @@
+package component
+type FormProps struct {
+    Action string
+    Method string
+    ClassN string
+}
+templ Form(props FormProps) {
+    <div class={props.ClassN}>
+    <form action={templ.SafeURL(props.Action)} method={props.Method}>
+    {children...}
+    </form>
+    </div>
+}
